@@ -1,0 +1,27 @@
+.routine-form {
+  margin-top: 30px;
+  padding: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.routine-form input {
+  border-radius: 4px;
+  padding: 10px 10px;
+  font-size: 14px;
+}
+
+.routine-form input:focus {
+  box-shadow: none;
+  border-color: #00c3ff;
+}
+
+.btn-primary {
+  border-radius: 4px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #556270;
+}
+
+.btn-primary:hover {
+  background-color: #00c3ff;
+}

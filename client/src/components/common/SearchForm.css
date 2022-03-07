@@ -1,0 +1,10 @@
+.SearchForm {
+  margin-top: 1em;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.SearchForm input:focus {
+  box-shadow: none;
+  border-color: #00c3ff;
+}

@@ -1,0 +1,27 @@
+.Comment {
+  position: relative;
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+}
+
+.comment p {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.comment i:first-child {
+  padding-right: 10px;
+}
+
+.comment time {
+  display: block;
+  font-size: 14px;
+  color: #6b7b8d;
+  margin-bottom: 5px;
+}
+
+hr {
+  border-top: 2px solid #bbb;
+}

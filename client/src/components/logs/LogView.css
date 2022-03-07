@@ -1,0 +1,24 @@
+.LogView {
+  position: relative;
+}
+
+.log-date {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 1em 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.no-entries {
+  padding: 1em;
+  margin: 2em 0 2em 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.edit-area i {
+  margin: 0 0 0 1em;
+}
+
+hr {
+  border-top: 5px solid #bbb;
+}

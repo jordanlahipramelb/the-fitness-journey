@@ -1,0 +1,130 @@
+#homepage-top {
+  /* put around the vertical center of page */
+  width: 100%;
+  height: 90vh;
+  background: url("../../images/homepage.jpg") top left;
+  padding-top: 15rem;
+  padding-bottom: 20rem;
+
+  color: #fff;
+
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
+
+#homepage-top:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.096);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#homepage-top h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #ffffff;
+  text-shadow: 2px 4px 10px #272727;
+}
+
+#homepage-top h1 span {
+  color: #00c3ff;
+}
+#homepage-top h2 {
+  color: #ffffff;
+  margin: 5px 0 30px 0;
+  font-size: 24px;
+  font-weight: 400;
+  text-shadow: 0 4px 15px #272727;
+}
+
+@media (min-width: 1024px) {
+  #homepage {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #homepage-top {
+    height: 100vh;
+  }
+  #homepage-top h1 {
+    font-size: 3em;
+    line-height: 1em;
+  }
+  #homepage-top h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-height: 500px) {
+  #homepage-top {
+    height: 120vh;
+  }
+}
+
+#services {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+#services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.719);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+#services .icon-box::before {
+  content: "";
+  position: absolute;
+  background: #cbe0fb;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+#services .icon-box:hover::before {
+  background: #00b2e9;
+  top: 0;
+  border-radius: 0px;
+}
+#services .icon {
+  margin-bottom: 15px;
+}
+#services .icon i {
+  font-size: 48px;
+  line-height: 1;
+  transition: all 0.3s ease-in-out;
+}
+#services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#services .title a {
+  color: #111;
+  text-decoration: none;
+}
+#services .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+#services .icon-box:hover .title a,
+#services .icon-box:hover .description {
+  color: #fff;
+}
+#services .icon-box:hover .icon i {
+  color: #fff;
+}

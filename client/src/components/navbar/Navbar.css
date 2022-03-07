@@ -1,0 +1,11 @@
+.title,
+#breadcrumb h2 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+
+.nav-item,
+#breadcrumb li {
+  font-family: "Karla", sans-serif;
+  text-transform: uppercase;
+}

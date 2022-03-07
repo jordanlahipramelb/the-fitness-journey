@@ -1,0 +1,51 @@
+.PostView {
+  padding: 0 0 2em 0;
+}
+
+.PostView-right {
+  position: relative;
+  right: 0;
+  top: 1em;
+  text-align: right;
+}
+
+.PostView-right i {
+  margin-left: 1em;
+}
+
+.post {
+  padding: 2em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.post-meta {
+  color: #838383;
+}
+
+.post-meta ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.post-meta ul li:first-child {
+  padding-right: 20px;
+}
+
+.post-meta i {
+  margin-right: 8px;
+}
+
+.post-content p {
+  line-height: 24px;
+}

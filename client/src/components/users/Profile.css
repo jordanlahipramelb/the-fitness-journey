@@ -1,0 +1,11 @@
+.panel {
+  padding: 2em;
+  margin: 2em 0 1em 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+  font-size: 2em;
+  padding: 0;
+  margin: 0 0 20px 0;
+}

@@ -1,0 +1,23 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a:hover {
+  color: #469fdf;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 5px #469fdf, 0 0 25px #469fdf, 0 0 50px #469fdf,
+    0 0 100px #469fdf;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
