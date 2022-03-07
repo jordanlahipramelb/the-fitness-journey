@@ -20,6 +20,15 @@ const routineRoutes = require("./routes/routinesRoutes");
 const logRoutes = require("./routes/logsRoutes");
 /*******/
 
+app.use("api/auth", authRoutes);
+app.use("api/athletes", usersRoutes);
+app.use("api/exercises", exercisesRoutes);
+app.use("api/forum", postsRoutes);
+/**  mergeParams route for comments to access post_id*/
+app.use("api/forum/:post_id/comments", postsCommentsRoutes);
+app.use("api/routines", routineRoutes);
+app.use("api/logs", logRoutes);
+
 app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny"));
@@ -39,15 +48,6 @@ app.get("*", (req, res) => {
 });
 
 /** End Deploying to Heroku */
-
-app.use("api/auth", authRoutes);
-app.use("api/athletes", usersRoutes);
-app.use("api/exercises", exercisesRoutes);
-app.use("api/forum", postsRoutes);
-/**  mergeParams route for comments to access post_id*/
-app.use("api/forum/:post_id/comments", postsCommentsRoutes);
-app.use("api/routines", routineRoutes);
-app.use("api/logs", logRoutes);
 
 /** Handle 404 errors -- this matches everything */
 app.use((req, res, next) => {
