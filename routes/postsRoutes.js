@@ -15,7 +15,7 @@ const Post = require("../models/postModel");
 const postNewSchema = require("../schemas/postNew.json");
 const postSearchSchema = require("../schemas/postSearch.json");
 const postUpdateSchema = require("../schemas/postUpdate.json");
-const router = new express.Router();
+const router = express.Router();
 
 /** GET /  =>
  *   { posts: [ { id, username, subject, body, date }, ...] }

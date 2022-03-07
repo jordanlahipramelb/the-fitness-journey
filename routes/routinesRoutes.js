@@ -15,7 +15,7 @@ const Routine = require("../models/routineModel");
 const routineNewSchema = require("../schemas/routineNew.json");
 const routineSearchSchema = require("../schemas/routineSearch.json");
 const routineUpdateSchema = require("../schemas/routineUpdate.json");
-const router = new express.Router();
+const router = express.Router();
 
 /** GET / =>
  *  { routines: [ { id, name, username }, ... ] }

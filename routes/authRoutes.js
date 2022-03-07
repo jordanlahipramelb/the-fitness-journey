@@ -4,7 +4,7 @@
 
 const jsonschema = require("jsonschema");
 const express = require("express");
-const router = new express.Router();
+const router = express.Router();
 const { BadRequestError } = require("../expressError");
 const { createToken } = require("../helpers/tokens");
 
