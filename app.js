@@ -49,7 +49,7 @@ app.get("*", (req, res) => {
 
 /** End Deploying to Heroku */
 
-app.post("api/auth/register", async (req, res, next) => {
+app.post("/api/auth/register", async (req, res, next) => {
   try {
     const validator = jsonschema.validate(req.body, userRegisterSchema);
     // if json is not valid, return errors
