@@ -40,14 +40,14 @@ app.get("*", (req, res) => {
 
 /** End Deploying to Heroku */
 
-app.use("/auth", authRoutes);
-app.use("/athletes", usersRoutes);
-app.use("/exercises", exercisesRoutes);
-app.use("/forum", postsRoutes);
+app.use("api/auth", authRoutes);
+app.use("api/athletes", usersRoutes);
+app.use("api/exercises", exercisesRoutes);
+app.use("api/forum", postsRoutes);
 /**  mergeParams route for comments to access post_id*/
-app.use("/forum/:post_id/comments", postsCommentsRoutes);
-app.use("/routines", routineRoutes);
-app.use("/logs", logRoutes);
+app.use("api/forum/:post_id/comments", postsCommentsRoutes);
+app.use("api/routines", routineRoutes);
+app.use("api/logs", logRoutes);
 
 /** Handle 404 errors -- this matches everything */
 app.use((req, res, next) => {
