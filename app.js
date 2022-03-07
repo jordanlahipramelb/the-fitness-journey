@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
-// app.use("/auth", authRoutes);
+app.use("/auth", authRoutes);
 // app.use("/athletes", usersRoutes);
 // app.use("/exercises", exercisesRoutes);
 // app.use("/forum", postsRoutes);
