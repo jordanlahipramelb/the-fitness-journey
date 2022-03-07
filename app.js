@@ -4,6 +4,7 @@
 
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const { NotFoundError } = require("./expressError");
 const { authenticateJWT } = require("./middleware/auth");
 const morgan = require("morgan");
@@ -24,9 +25,16 @@ app.use(express.json());
 app.use(morgan("tiny"));
 app.use(authenticateJWT);
 
-// app.get("/", (req, res) => {
-//   res.send("Hello world");
-// });
+// Have Node serve the files for our built React app
+app.use(express.static(path.resolve(__dirname, "../client/public")));
+// Handle GET requests to /api route
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+// All other GET requests not handled before will return our React app
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
+});
 
 app.use("/auth", authRoutes);
 app.use("/athletes", usersRoutes);
