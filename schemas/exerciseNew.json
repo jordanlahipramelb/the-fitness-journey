@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "equipmentId": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "primaryMuscleId": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "secondaryMuscleId": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "description": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 100
+    },
+    "instructions": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 300
+    },
+    "imageUrl": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["name", "equipmentId", "primaryMuscleId"]
+}

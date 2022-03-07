@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "dayOfWeek": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 7
+    },
+    "reps": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 50
+    },
+    "sets": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 50
+    }
+  },
+  "additionalProperties": false,
+  "required": ["dayOfWeek", "reps", "sets"]
+}

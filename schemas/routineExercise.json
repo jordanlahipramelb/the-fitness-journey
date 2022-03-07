@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "exercise_id": {
+      "type": "integer"
+    },
+    "reps": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2
+    },
+    "sets": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2
+    }
+  },
+  "additionalProperties": false,
+  "required": ["exercise_id", "reps", "sets"]
+}

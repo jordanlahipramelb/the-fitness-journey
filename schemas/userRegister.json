@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "password": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 20
+    },
+    "firstName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "lastName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "email": {
+      "type": "string",
+      "minLength": 6,
+      "maxLength": 60,
+      "format": "email"
+    },
+    "city": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "fitnessType": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "bio": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "imageUrl": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "username",
+    "firstName",
+    "lastName",
+    "password",
+    "email",
+    "city",
+    "state",
+    "fitnessType",
+    "bio"
+  ]
+}
