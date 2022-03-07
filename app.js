@@ -23,14 +23,11 @@ const logRoutes = require("./routes/logsRoutes");
 /** Routes for authentication */
 
 const jsonschema = require("jsonschema");
-const express = require("express");
-const router = new express.Router();
-const { BadRequestError } = require("../expressError");
-const { createToken } = require("../helpers/tokens");
+const { BadRequestError } = require("./expressError");
+const { createToken } = require("./helpers/tokens");
 
-const User = require("../models/userModel");
-const userAuthSchema = require("../schemas/userAuth.json");
-const userRegisterSchema = require("../schemas/userRegister.json");
+const User = require("./models/userModel");
+const userRegisterSchema = require("./schemas/userRegister.json");
 
 app.use(cors());
 app.use(express.json());
