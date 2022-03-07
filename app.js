@@ -10,7 +10,7 @@ const morgan = require("morgan");
 const app = express();
 
 /** Routes */
-// const authRoutes = require("./routes/authRoutes");
+const authRoutes = require("./routes/authRoutes");
 // const usersRoutes = require("./routes/usersRoutes");
 // const exercisesRoutes = require("./routes/exercisesRoutes");
 // const postsRoutes = require("./routes/postsRoutes");
@@ -28,11 +28,11 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
-// app.use("/auth", authRoutes);
+app.use("/auth", authRoutes);
 // app.use("/athletes", usersRoutes);
 // app.use("/exercises", exercisesRoutes);
 // app.use("/forum", postsRoutes);
-// // mergeParams route for comments to access post_id
+// mergeParams route for comments to access post_id
 // app.use("/forum/:post_id/comments", postsCommentsRoutes);
 // app.use("/routines", routineRoutes);
 // app.use("/logs", logRoutes);
