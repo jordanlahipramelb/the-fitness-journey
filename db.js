@@ -2,6 +2,8 @@
 
 /** Database setup for fitness journey. */
 
+/** When deploying to heroku, you must have postgresql add-on */
+
 const { Client } = require("pg");
 
 // Get database name
