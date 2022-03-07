@@ -20,6 +20,18 @@ const routineRoutes = require("./routes/routinesRoutes");
 const logRoutes = require("./routes/logsRoutes");
 /*******/
 
+/** Routes for authentication */
+
+const jsonschema = require("jsonschema");
+const express = require("express");
+const router = new express.Router();
+const { BadRequestError } = require("../expressError");
+const { createToken } = require("../helpers/tokens");
+
+const User = require("../models/userModel");
+const userAuthSchema = require("../schemas/userAuth.json");
+const userRegisterSchema = require("../schemas/userRegister.json");
+
 app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny"));
@@ -39,6 +51,26 @@ app.get("*", (req, res) => {
 });
 
 /** End Deploying to Heroku */
+
+app.post("/register", async (req, res, next) => {
+  try {
+    const validator = jsonschema.validate(req.body, userRegisterSchema);
+    // if json is not valid, return errors
+    if (!validator.valid) {
+      const errs = validator.errors.map((er) => er.stack);
+
+      throw new BadRequestError(errs);
+    }
+
+    // register user in database
+    const newUser = await User.register({ ...req.body, isAdmin: false });
+    const token = createToken(newUser);
+
+    return res.status(201).json({ token });
+  } catch (err) {
+    return next(err);
+  }
+});
 
 app.use("api/auth", authRoutes);
 app.use("api/athletes", usersRoutes);
