@@ -7,20 +7,22 @@ const { Client } = require("pg");
 // Get database name
 const { getDatabaseUri } = require("./config");
 
-let db;
+let db = new Client({
+  connectionString: getDatabaseUri(),
+});
 
-if (process.env.NODE_ENV === "production") {
-  db = new Client({
-    connectionString: getDatabaseUri(),
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  });
-} else {
-  db = new Client({
-    connectionString: getDatabaseUri(),
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   db = new Client({
+//     connectionString: getDatabaseUri(),
+//     ssl: {
+//       rejectUnauthorized: false,
+//     },
+//   });
+// } else {
+//   db = new Client({
+//     connectionString: getDatabaseUri(),
+//   });
+// }
 
 db.connect();
 
