@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "build": "cd client && npm install && npm run build",
     "dev": "nodemon server.js",
     "test": "jest -i"
   },
@@ -34,5 +35,8 @@
   },
   "devDependencies": {
     "supertest": "^6.1.6"
+  },
+  "engines": {
+    "node": "^12.18.2"
   }
 }
