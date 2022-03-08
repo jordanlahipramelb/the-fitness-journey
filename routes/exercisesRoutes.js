@@ -13,7 +13,7 @@ const exerciseNewSchema = require("../schemas/exerciseNew.json");
 const exerciseSearchSchema = require("../schemas/exerciseSearch.json");
 const exerciseUpdateSchema = require("../schemas/exerciseUpdate.json");
 
-const router = express.Router();
+const router = new express.Router();
 
 /** POST / { exercise } =>  { exercise }
  *

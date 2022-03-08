@@ -13,7 +13,7 @@ const {
 } = require("../middleware/auth");
 const Log = require("../models/logModel");
 
-const router = express.Router();
+const router = new express.Router();
 
 /** GET / =>
  *  { logs: [ { id, date, username }, ... ] }

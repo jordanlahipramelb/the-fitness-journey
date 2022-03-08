@@ -17,7 +17,7 @@ const commentNewSchema = require("../schemas/commentNew.json");
 const commentUpdateSchema = require("../schemas/commentUpdate.json");
 
 // You must pass {mergeParams: true} to the child router if you want to access the params from the parent router.
-const router = express.Router({ mergeParams: true });
+const router = new express.Router({ mergeParams: true });
 
 /** GET /  =>
  *   { id, username, body, date, post_id }
