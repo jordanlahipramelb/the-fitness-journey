@@ -4,7 +4,7 @@ Link: https://thefitnessjourney.herokuapp.com/
 
 ## Description
 
-**The Fitness Journey** is a website thant contains an exercise database, along with a routine tracker and forum section. There are many people in the world who like/want to workout, ranging from beginners to advanced; some know what they’re doing, but some don’t. Users will be able to create an account; it will have information about what type of fitness they perform, a badge/karma system, and other basic user information. Users will be able to share their fitness knowledge with other users via post/comment system, as well as track/share their workout routines.
+**The Fitness Journey** is a website thant contains an exercise database, along with a routine tracker and forum section. There are many people in the world who like/want to workout, ranging from beginners to advanced; some know what they’re doing, but some don’t. Users will be able to create an account; it will have information about what type of fitness they perform, routines created, workouts logged, and other basic user information. Users will be able to share their fitness knowledge with other users via post/comment system, as well as track/share their workout routines.
 
 ## Features
 
