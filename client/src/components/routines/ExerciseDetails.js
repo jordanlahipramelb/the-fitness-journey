@@ -12,7 +12,7 @@ const RoutineExercise = ({ id, name, sets, reps }) => {
   return (
     <li className="RoutineExercise list-group-item" key={name}>
       <Link
-        href={`/exercises/${id}`}
+        to={`/exercises/${id}`}
         style={{ color: "inherit", textDecoration: "none" }}
       >
         {name}
