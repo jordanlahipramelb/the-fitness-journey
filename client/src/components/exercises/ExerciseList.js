@@ -49,15 +49,15 @@ const ExerciseList = () => {
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb" className="pb-2">
             <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>Exercises</h2>
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item past">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item past">
                     <Link to="/" style={{ textDecoration: "none" }}>
                       Home
                     </Link>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
+                  <li className="breadcrumb-item active" aria-current="page">
                     Exercises
                   </li>
                 </ol>

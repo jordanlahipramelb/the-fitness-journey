@@ -38,7 +38,7 @@ const PostList = () => {
   /** If no posts and there are 0 posts in state */
 
   if (!posts && posts.length === 0) {
-    return <h3 className="text-center">No posts present.</h3>;
+    return <h3 className="text-center m-4">No posts present.</h3>;
   }
 
   return (
@@ -47,15 +47,15 @@ const PostList = () => {
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb" className="pb-2">
             <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>Forum</h2>
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item past">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item past">
                     <Link to="/" style={{ textDecoration: "none" }}>
                       Home
                     </Link>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
+                  <li className="breadcrumb-item active" aria-current="page">
                     Forum
                   </li>
                 </ol>
@@ -84,7 +84,7 @@ const PostList = () => {
                 ))}
               </div>
             ) : (
-              <h3 className="lead">No posts found.</h3>
+              <h3 className="lead text-center">No posts found.</h3>
             )}
           </section>
         </div>

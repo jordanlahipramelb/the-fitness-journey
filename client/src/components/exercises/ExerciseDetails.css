@@ -1,8 +1,22 @@
 .ExerciseDetails {
-  font-family: "Roboto", sans-serif;
+  /* put around the vertical center of page */
+  background: url("../../images/homepage.jpg") top left;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
-h5 {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
+.ExerciseDetails .card {
+  padding: 30px;
+  backdrop-filter: blur(21px) saturate(200%);
+  -webkit-backdrop-filter: blur(21px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ExerciseDetails ul li {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
 }

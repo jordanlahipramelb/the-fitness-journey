@@ -42,19 +42,19 @@ const NewLog = () => {
   const cancel = () => history.push(`/logs`);
 
   return (
-    <div className="NewLogForm py-4">
+    <div className="NewLogForm">
       <div className="container">
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb">
             <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-end">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
+              <div className="d-flex justify-content-end">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item">
                     <Link to="/" style={{ textDecoration: "none" }}>
                       Home
                     </Link>
                   </li>
-                  <li class="breadcrumb-item">
+                  <li className="breadcrumb-item">
                     <Link
                       to={`/logs/${currentUser.username}`}
                       style={{ textDecoration: "none" }}
@@ -62,7 +62,7 @@ const NewLog = () => {
                       Logs
                     </Link>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
+                  <li className="breadcrumb-item active" aria-current="page">
                     New
                   </li>
                 </ol>

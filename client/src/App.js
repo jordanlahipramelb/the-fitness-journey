@@ -103,6 +103,7 @@ function App() {
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <Navbar logout={logout} />
         <Routes login={login} register={register} />
+
         <Footer />
       </UserContext.Provider>
     </BrowserRouter>

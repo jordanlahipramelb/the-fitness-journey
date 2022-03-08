@@ -53,7 +53,6 @@ const CommentForm = ({ postId, addComment }) => {
             endAdornment: (
               <InputAdornment position="end">
                 <IconButton
-                  baseClassName="fas"
                   className="fas fa-plus-circle"
                   edge="end"
                   color="primary"

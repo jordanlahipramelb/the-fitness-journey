@@ -35,20 +35,20 @@ const UserProfile = () => {
 
   return (
     <div className="UserProfile py-4">
-      <div className="container">
+      <div className="container pb-5 mb-5">
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb" className="pb-2 mb-4">
             <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-between align-items-center">
-                <h2>Athlete</h2>
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item past">
+              <div className="d-flex justify-content-between align-items-center">
+                <h2>{user.username}</h2>
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item past">
                     <Link to="/" style={{ textDecoration: "none" }}>
                       Home
                     </Link>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    {user.username}
+                  <li className="breadcrumb-item active" aria-current="page">
+                    Athlete
                   </li>
                 </ol>
               </div>
@@ -58,25 +58,28 @@ const UserProfile = () => {
 
         <div className="col-md-8 offset-md-2">
           <div className="row">
-            <div className="col-sm-4 col-md-6 col-lg-6 mx-auto">
-              <img
-                alt="User Avatar"
-                src={user.imageUrl}
-                className="img-thumbnail rounded mx-auto d-block"
-              />
-            </div>
-            <div className="col-sm-4 col-md-6 col-lg-6 mx-auto">
+            <div className="col-sm-12 col-md-12 col-lg-12 mx-auto">
               <div className="panel">
-                <div className="dashboard-panel">
-                  <h4 className="dashboard-title">@{user.username}</h4>
-                </div>
-                <div className="dashboard-content">
-                  <p>{user.bio}</p>
-                  <p>
-                    <span className="fa fa-map-marker"></span> {user.city},
-                    {user.state}
-                  </p>
-                  <p>{user.fitnessType}</p>
+                <div className="row">
+                  <div className="col-sm-12 col-md-12 col-lg-6">
+                    <img
+                      alt="User Avatar"
+                      src={user.imageUrl}
+                      className="img-thumbnail rounded mx-auto d-block"
+                    />
+                  </div>
+                  <div className="col-sm-12 col-md-12 col-lg-6">
+                    <h4>@{user.username}</h4>
+
+                    <div className="dashboard-content">
+                      <p>{user.bio}</p>
+                      <p>
+                        <span className="fa fa-map-marker"></span> {user.city},
+                        {user.state}
+                      </p>
+                      <p>{user.fitnessType}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -85,18 +88,22 @@ const UserProfile = () => {
                 <div className="dashboard-panel">
                   <h4 className="dashboard-title">Routines</h4>
                   <div className="dashboard-content">
-                    <ul className="list-group list-group-flush">
-                      {user.routines.map((routine) => (
-                        <Link
-                          to={`/routines/${routine.id}`}
-                          style={{ color: "inherit", textDecoration: "none" }}
-                        >
-                          <li className="list-group-item list-group-item-action">
-                            {routine.name}
-                          </li>
-                        </Link>
-                      ))}
-                    </ul>
+                    {user.routines.length ? (
+                      <ul className="list-group list-group-flush">
+                        {user.routines.map((routine) => (
+                          <Link
+                            to={`/routines/${routine.id}`}
+                            style={{ color: "inherit", textDecoration: "none" }}
+                          >
+                            <li className="list-group-item list-group-item-action">
+                              {routine.name}
+                            </li>
+                          </Link>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="lead text-center">No routines found.</p>
+                    )}
                   </div>
                 </div>
               </div>

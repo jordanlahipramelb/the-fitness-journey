@@ -15,10 +15,10 @@ const LogCard = ({ id, date, username }) => {
       <Link to={`/logs/${id}`} style={{ textDecoration: "none" }} key={id}>
         <section className="log">
           <h2 className="log-name">{date}</h2>
-          <div class="log-meta">
+          <div className="log-meta">
             <ul>
-              <li class="d-flex align-items-center">
-                <i class="far fa-user"></i>
+              <li className="d-flex align-items-center">
+                <i className="far fa-user"></i>
                 <Link
                   to={`/athletes/${username}`}
                   style={{ color: "inherit", textDecoration: "none" }}

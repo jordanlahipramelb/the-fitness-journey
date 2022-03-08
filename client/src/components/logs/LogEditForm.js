@@ -30,7 +30,7 @@ const LogEditForm = ({ log, updateLog, cancel }) => {
   };
 
   return (
-    <div className="LogEditForm mb-4">
+    <div className="LogEditForm">
       <div className="col-md-8 offset-md-2">
         <div className="log-form">
           <Box component="form" onSubmit={handleSubmit}>

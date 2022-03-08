@@ -1,5 +1,5 @@
-.LogView {
-  position: relative;
+.Log .container {
+  padding-bottom: 5em;
 }
 
 .log-date {

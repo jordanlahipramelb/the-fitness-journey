@@ -15,10 +15,10 @@ const RoutineCard = ({ id, name, username }) => {
       <Link to={`/routines/${id}`} key={id} style={{ textDecoration: "none" }}>
         <section className="routine">
           <h2 className="routine-name">{name}</h2>
-          <div class="routine-meta">
+          <div className="routine-meta">
             <ul>
-              <li class="d-flex align-items-center">
-                <i class="far fa-user"></i>
+              <li className="d-flex align-items-center">
+                <i className="far fa-user"></i>
                 <Link
                   to={`/athletes/${username}`}
                   style={{ color: "inherit", textDecoration: "none" }}

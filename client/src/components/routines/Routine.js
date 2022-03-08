@@ -79,6 +79,7 @@ const Routine = () => {
     await FitnessJourney.deleteRoutine(routineId);
 
     history.push("/routines");
+    window.location.reload(true);
   };
 
   /** Adds exercise to routine */

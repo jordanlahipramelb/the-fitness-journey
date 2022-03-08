@@ -34,24 +34,24 @@ const ExerciseDetails = () => {
 
   return (
     <div className="ExerciseDetails py-4">
-      <div className="container">
+      <div className="container pb-4 mb-4">
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb" className="pb-3">
             <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>{exercise.name}</h2>
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item">
                     <Link to="/" style={{ textDecoration: "none" }}>
                       Home
                     </Link>
                   </li>
-                  <li class="breadcrumb-item">
+                  <li className="breadcrumb-item">
                     <Link to="/exercises" style={{ textDecoration: "none" }}>
                       Exercises
                     </Link>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
+                  <li className="breadcrumb-item active" aria-current="page">
                     Exercise
                   </li>
                 </ol>

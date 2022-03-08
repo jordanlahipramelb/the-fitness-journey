@@ -44,7 +44,7 @@ const PostView = ({ post, toggleEdit, deletePost }) => {
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb" className="pb-2">
             <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-end">
+              <div className="d-flex justify-content-end">
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item">
                     <Link to="/" style={{ textDecoration: "none" }}>

@@ -32,7 +32,7 @@ const PostForm = ({ save, post, cancel }) => {
   };
 
   return (
-    <div className="PostForm mb-4">
+    <div className="PostForm">
       <div className="col-md-8 offset-md-2">
         <div className="post-form">
           <Box

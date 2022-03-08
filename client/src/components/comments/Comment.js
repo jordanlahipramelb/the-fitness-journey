@@ -46,7 +46,7 @@ const Comment = ({ id, username, body, date, deleteComment }) => {
 
   return (
     <div className="comment" key={id}>
-      <div class="d-flex">
+      <div className="d-flex">
         {sameUser ? userEditBtns() : null}
         <div>
           <Link

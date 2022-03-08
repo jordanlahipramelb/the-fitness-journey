@@ -77,7 +77,7 @@ const LogView = ({
   if (!log) return <LoadingPage />;
 
   return (
-    <div className="LogView container mb-5">
+    <div className="LogView container">
       <div className="col-md-10 offset-md-1">
         <section id="breadcrumb" className="pb-2">
           <nav aria-label="breadcrumb">

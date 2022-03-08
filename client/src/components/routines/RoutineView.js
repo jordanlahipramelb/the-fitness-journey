@@ -141,7 +141,7 @@ const RoutineView = ({
       </div>
       {sameUser ? (
         <div className="text-center pt-5">
-          <hr class />
+          <hr />
           {userForm()}
         </div>
       ) : null}

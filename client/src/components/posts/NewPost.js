@@ -39,24 +39,24 @@ const NewPost = () => {
   const cancel = () => history.push("/forum");
 
   return (
-    <div className="NewPostForm py-4">
+    <div className="NewPostForm">
       <div className="container">
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb">
             <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-end">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
+              <div className="d-flex justify-content-end">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item">
                     <Link to="/" style={{ textDecoration: "none" }}>
                       Home
                     </Link>
                   </li>
-                  <li class="breadcrumb-item">
+                  <li className="breadcrumb-item">
                     <Link to="/forum" style={{ textDecoration: "none" }}>
                       Forum
                     </Link>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
+                  <li className="breadcrumb-item active" aria-current="page">
                     New Post
                   </li>
                 </ol>

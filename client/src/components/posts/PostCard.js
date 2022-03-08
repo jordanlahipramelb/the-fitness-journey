@@ -19,12 +19,12 @@ const PostCard = ({ id, username, subject, date }) => {
           style={{ textDecoration: "none" }}
           key={id}
         >
-          <h2 class="entry-title">{subject}</h2>
+          <h2 className="entry-title">{subject}</h2>
         </Link>
-        <div class="entry-meta">
+        <div className="entry-meta">
           <ul>
-            <li class="d-flex align-items-center">
-              <i class="far fa-user"></i>
+            <li className="d-flex align-items-center">
+              <i className="far fa-user"></i>
               <Link
                 to={`/athletes/${username}`}
                 style={{ color: "inherit", textDecoration: "none" }}
@@ -33,8 +33,8 @@ const PostCard = ({ id, username, subject, date }) => {
                 {username}
               </Link>
             </li>
-            <li class="d-flex align-items-center">
-              <i class="far fa-clock"></i>
+            <li className="d-flex align-items-center">
+              <i className="far fa-clock"></i>
               {date}
             </li>
           </ul>

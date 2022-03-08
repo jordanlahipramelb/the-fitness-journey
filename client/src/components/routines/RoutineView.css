@@ -1,5 +1,5 @@
-.RoutineView {
-  position: relative;
+.Routine .container {
+  padding-bottom: 5em;
 }
 
 .icon:hover {

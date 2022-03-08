@@ -52,7 +52,7 @@ const LogEntryForm = ({ logEntries, routinesWithExercises, addEntry }) => {
   if (!logEntries || !routinesWithExercises) return <LoadingPage />;
 
   return (
-    <div className="LogEntryForm pb-5">
+    <div className="LogEntryForm">
       <div className="row">
         <div className="col-sm-12 col-md-12">
           <div className="add-delete-form">

@@ -120,7 +120,7 @@ const Log = () => {
 
   return (
     <div className="Log py-4">
-      <div className="container">
+      <div className="container mb-4 pb-4">
         {/* Decide whether to show the edit form if toggleEdit is true, or the simple RoutineView component */}
 
         {isEditing ? (

@@ -10,7 +10,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer id="footer">
+    <footer>
       <div className="footer-top">
         <div className="container">
           <div className="row">
@@ -47,22 +47,23 @@ const Footer = () => {
               <h4>Useful Links</h4>
               <ul>
                 <li>
-                  <i class="fas fa-chevron-right"></i> <Link to="/">Home</Link>
+                  <i className="fas fa-chevron-right"></i>{" "}
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <i class="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right"></i>
                   <Link to="/logs">Logs</Link>
                 </li>
                 <li>
-                  <i class="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right"></i>
                   <Link to="/routines">Routines</Link>
                 </li>
                 <li>
-                  <i class="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right"></i>
                   <Link to="/exercises">Exercises</Link>
                 </li>
                 <li>
-                  <i class="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right"></i>
                   <Link to="/forum">Forum</Link>
                 </li>
               </ul>

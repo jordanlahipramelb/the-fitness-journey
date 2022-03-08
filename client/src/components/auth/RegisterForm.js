@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Alert from "../common/Alert";
 import {
   Box,
@@ -31,8 +31,7 @@ const RegisterForm = ({ register }) => {
     state: "",
     bio: "",
     fitnessType: "",
-    imageUrl:
-      "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg", // Default image photo
+    imageUrl: "",
   });
   const [formErrors, setFormErrors] = useState([]);
   const states = [
@@ -101,6 +100,12 @@ const RegisterForm = ({ register }) => {
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
+
+    if (formData.imageUrl === "") {
+      formData.imageUrl =
+        "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg";
+    }
+
     let result = await register(formData);
 
     if (result.success) {
@@ -131,29 +136,10 @@ const RegisterForm = ({ register }) => {
   } = formData;
 
   return (
-    <div className="SignupForm py-4 mb-4">
+    <div className="RegisterForm py-4">
       <div className="container">
-        <div className="col-md-10 offset-md-1">
-          <section id="breadcrumb">
-            <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-end">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-                    <Link to="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </Link>
-                  </li>
-
-                  <li class="breadcrumb-item active" aria-current="page">
-                    Register
-                  </li>
-                </ol>
-              </div>
-            </nav>
-          </section>
-        </div>
         <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-          <div className="register-form">
+          <div className="register-form mb-5">
             <h2 className="mb-3">Sign Up</h2>
 
             <Box
@@ -217,9 +203,8 @@ const RegisterForm = ({ register }) => {
                 className="form-control"
                 value={imageUrl}
                 onChange={handleChange}
-                helperText="Insert image URL above, or leave as default photo."
               />
-
+              <small>Insert image URL above, or leave as default photo.</small>
               <TextField
                 id="outlined-basic"
                 label="Email"
@@ -229,9 +214,9 @@ const RegisterForm = ({ register }) => {
                 className="form-control"
                 value={email}
                 onChange={handleChange}
-                helperText="We'll never share your email with anyone else."
                 required
               />
+              <small>We'll never share your email with anyone else.</small>
 
               <TextField
                 id="outlined-basic"

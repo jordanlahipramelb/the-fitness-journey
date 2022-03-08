@@ -27,6 +27,7 @@ const NewRoutine = () => {
 
     setRoutine(res);
     history.push(`/routines`);
+    window.location.reload(true);
   };
 
   /** Cancel routine creation and redirect to routines */
@@ -39,19 +40,19 @@ const NewRoutine = () => {
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb">
             <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-end">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
+              <div className="d-flex justify-content-end">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item">
                     <Link to="/" style={{ textDecoration: "none" }}>
                       Home
                     </Link>
                   </li>
-                  <li class="breadcrumb-item">
+                  <li className="breadcrumb-item">
                     <Link to="/routines" style={{ textDecoration: "none" }}>
                       Routines
                     </Link>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
+                  <li className="breadcrumb-item active" aria-current="page">
                     Routine
                   </li>
                 </ol>

@@ -28,7 +28,7 @@ const Homepage = () => {
       <section id="services" className="bg-dark">
         <div className="container">
           <div className="row">
-            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div className="col-md-6 col-lg-3 d-flex  mb-5 mb-lg-0">
               <div className="icon-box">
                 <div className="icon">
                   <i className="fas fa-dumbbell"></i>
@@ -43,7 +43,7 @@ const Homepage = () => {
               </div>
             </div>
 
-            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div className="col-md-6 col-lg-3 d-flex mb-5 mb-lg-0">
               <div className="icon-box">
                 <div className="icon">
                   <i className="fas fa-dumbbell"></i>
@@ -58,7 +58,7 @@ const Homepage = () => {
               </div>
             </div>
 
-            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div className="col-md-6 col-lg-3 d-flex mb-5 mb-lg-0">
               <div className="icon-box">
                 <div className="icon">
                   <i className="fas fa-dumbbell"></i>
@@ -73,7 +73,7 @@ const Homepage = () => {
               </div>
             </div>
 
-            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div className="col-md-6 col-lg-3 d-flex mb-5 mb-lg-0">
               <div className="icon-box">
                 <div className="icon">
                   <i className="fas fa-dumbbell"></i>

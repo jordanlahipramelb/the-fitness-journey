@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Alert from "../common/Alert";
 import { Box, TextField } from "@mui/material";
 import "./LoginForm.css";
@@ -49,29 +49,10 @@ const LoginForm = ({ login }) => {
   const { username, password } = formData;
 
   return (
-    <div className="LoginForm py-4">
-      <div className="container">
-        <div className="col-md-10 offset-md-1">
-          <section id="breadcrumb">
-            <nav aria-label="breadcrumb">
-              <div class="d-flex justify-content-end">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-                    <Link to="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </Link>
-                  </li>
-
-                  <li class="breadcrumb-item active" aria-current="page">
-                    Login
-                  </li>
-                </ol>
-              </div>
-            </nav>
-          </section>
-        </div>
-        <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-          <div className="login-form">
+    <div className="LoginForm">
+      <div className="container h-100">
+        <div className="d-flex align-items-center justify-content-center h-100">
+          <div className="login-form mb-5">
             <h3 className="mb-3">Login</h3>
 
             <Box
