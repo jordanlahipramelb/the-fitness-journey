@@ -153,7 +153,7 @@ const RoutineExerciseAddDeleteForm = ({
                 </div>
                 <button
                   type="submit"
-                  className="btn btn-primary container mt-2"
+                  className="btn btn-primary container-fluid mt-2"
                 >
                   Add
                 </button>
@@ -191,7 +191,10 @@ const RoutineExerciseAddDeleteForm = ({
                     </Select>
                   </FormControl>
                 </div>
-                <button type="submit" className="btn btn-danger container mt-2">
+                <button
+                  type="submit"
+                  className="btn btn-danger container-fluid mt-2"
+                >
                   Delete
                 </button>
               </div>

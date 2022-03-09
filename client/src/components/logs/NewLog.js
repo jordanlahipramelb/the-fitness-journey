@@ -42,8 +42,8 @@ const NewLog = () => {
   const cancel = () => history.push(`/logs`);
 
   return (
-    <div className="NewLogForm">
-      <div className="container">
+    <div className="NewLogForm py-4">
+      <div className="container pb-4 mb-4">
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb">
             <nav aria-label="breadcrumb">

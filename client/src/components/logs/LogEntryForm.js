@@ -138,7 +138,7 @@ const LogEntryForm = ({ logEntries, routinesWithExercises, addEntry }) => {
 
                 <button
                   type="submit"
-                  className="btn btn-primary container mt-2"
+                  className="btn btn-primary container-fluid mt-2"
                 >
                   Add
                 </button>

@@ -39,8 +39,8 @@ const NewPost = () => {
   const cancel = () => history.push("/forum");
 
   return (
-    <div className="NewPostForm">
-      <div className="container">
+    <div className="NewPostForm py-4">
+      <div className="container pb-4 mb-4">
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb">
             <nav aria-label="breadcrumb">
