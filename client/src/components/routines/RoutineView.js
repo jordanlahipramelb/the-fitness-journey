@@ -120,21 +120,20 @@ const RoutineView = ({
 
         <div className="row">
           {routine.map((data) => (
-            <div className="col-lg-6" key={data.dayofweek}>
-              <div className="card my-3 p-2">
-                {data.exercises.length === 0 ? (
-                  <div className="card-body">
-                    <p className="text-center">
-                      Athlete has not added exercises yet.
-                    </p>
-                  </div>
-                ) : (
+            <div
+              className="col-lg-6 d-flex align-items-stretch"
+              key={data.dayofweek}
+            >
+              {data.exercises.length === 0 ? (
+                <h4>Athlete has not added exercises yet.</h4>
+              ) : (
+                <div className="card my-3 p-2 flex-fill">
                   <div className="card-body" key={data.dayofweek}>
                     <h4 className="card-title">Day {data.dayofweek}</h4>
                     <RoutineExerciseList exercises={data.exercises} />
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           ))}
         </div>

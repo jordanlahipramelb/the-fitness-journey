@@ -25,7 +25,7 @@ const LoginForm = ({ login }) => {
   const handleSubmit = async (evt) => {
     evt.preventDefault();
 
-    // login function prop passed in from API->App->Routes
+    // login function prop passed in from api->App->Routes
     let result = await login(formData);
 
     // redirect to companies if successful

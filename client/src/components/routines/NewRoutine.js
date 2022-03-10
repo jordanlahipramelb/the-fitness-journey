@@ -35,7 +35,7 @@ const NewRoutine = () => {
   const cancel = () => history.push("/routines");
 
   return (
-    <div className="NewRoutineForm  py-4">
+    <div className="NewRoutine py-4">
       <div className="container">
         <div className="col-md-10 offset-md-1">
           <section id="breadcrumb">
@@ -72,7 +72,7 @@ const NewRoutine = () => {
         <RoutineForm
           routine={routine}
           addRoutine={addRoutine}
-          cancelRoutine={cancel}
+          cancel={cancel}
         />
       </div>
     </div>

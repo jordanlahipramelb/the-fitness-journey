@@ -37,7 +37,7 @@ const NewLog = () => {
     history.push(`/athlete`);
   };
 
-  /** Cancel routine creation and redirect to routines */
+  /** Cancel log creation and redirect to logs */
 
   const cancel = () => history.push(`/logs`);
 

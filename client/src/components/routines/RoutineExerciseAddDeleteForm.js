@@ -74,8 +74,8 @@ const RoutineExerciseAddDeleteForm = ({
   return (
     <div className="RoutineExerciseAddDeleteForm pb-5">
       <div className="row">
-        <div className="col-sm-6 col-md-6">
-          <div className="add-delete-form">
+        <div className="col-sm-6 col-md-6 d-flex align-items-stretch">
+          <div className="add-delete-form flex-fill">
             <form onSubmit={handleAddSubmit}>
               <div className="card-body p-2">
                 <h4 className="card-title text-center">Add Exercise</h4>
@@ -161,8 +161,8 @@ const RoutineExerciseAddDeleteForm = ({
             </form>
           </div>
         </div>
-        <div className="col-sm-6 col-md-6">
-          <div className="add-delete-form">
+        <div className="col-sm-6 col-md-6 d-flex align-items-stretch">
+          <div className="add-delete-form flex-fill">
             <form onSubmit={handleDeleteSubmit}>
               <div className="card-body p-2">
                 <h4 className="card-title text-center">Delete Exercise</h4>

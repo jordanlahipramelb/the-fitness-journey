@@ -35,9 +35,12 @@ h6 {
   box-shadow: 0 0 5px #469fdf;
 }
 
+.Routine,
+.Post,
 .PostList,
 .ExerciseList,
 .RoutineList,
-.LogList {
+.LogList,
+.NewRoutine {
   margin-bottom: 10em;
 }

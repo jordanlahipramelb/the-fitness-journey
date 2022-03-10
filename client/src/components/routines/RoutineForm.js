@@ -9,7 +9,7 @@ import "./RoutineForm.css";
  * Child of NewRoutine Component
  */
 
-const RoutineForm = ({ routine, addRoutine }) => {
+const RoutineForm = ({ routine, addRoutine, cancel }) => {
   const [formData, setFormData] = useState({
     username: routine.username,
     name: routine.name,
@@ -32,13 +32,11 @@ const RoutineForm = ({ routine, addRoutine }) => {
 
   return (
     <div className="RoutineForm mb-4">
-      <div className="col-md-8 offset-md-2">
+      <div className="col-sm-12 col-md-8 offset-md-2">
         <div className="routine-form">
           <Box
             component="form"
-            sx={{
-              "& > :not(style)": { m: 1 },
-            }}
+            p={1}
             autoComplete="off"
             onSubmit={handleSubmit}
           >
@@ -47,7 +45,7 @@ const RoutineForm = ({ routine, addRoutine }) => {
                 id="outlined-basic"
                 variant="outlined"
                 label="Name"
-                className="form-control mb-2"
+                className="form-control mb-3"
                 name="name"
                 placeholder="What would you like to name your routine?"
                 value={formData.name}
@@ -61,7 +59,7 @@ const RoutineForm = ({ routine, addRoutine }) => {
                 name="description"
                 label="Description"
                 placeholder="What is your routine about? (Ex. Type of routine, body part split, etc.)"
-                className="form-control"
+                className="form-control mb-3"
                 value={formData.description}
                 onChange={handleChange}
                 multiline
@@ -69,9 +67,14 @@ const RoutineForm = ({ routine, addRoutine }) => {
                 required
               />
             </div>
-
-            <button type="submit" className="btn btn-primary container mt-2">
+            <button type="submit" className="btn btn-primary container-fluid">
               Create
+            </button>
+            <button
+              onClick={cancel}
+              className="btn btn-secondary container mt-1"
+            >
+              Cancel
             </button>
           </Box>
         </div>

@@ -45,7 +45,7 @@ const SearchForm = ({ searchFor }) => {
             endAdornment: (
               <InputAdornment position="end">
                 <IconButton
-                  baseClassName="fas"
+                  baseclassname="fas"
                   className="fas fa-search"
                   type="submit"
                   edge="end"

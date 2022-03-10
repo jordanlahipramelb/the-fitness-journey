@@ -99,7 +99,7 @@ const Post = () => {
           />
         )}
 
-        <div className="Post-comments">
+        <div className="Post-comments py-3">
           <CommentList deleteComment={deleteComment} comments={post.comments} />
           <CommentForm addComment={addComment} postId={postId} />
         </div>
