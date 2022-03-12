@@ -4,20 +4,28 @@ Link: https://thefitnessjourney.herokuapp.com/
 
 ## Description
 
-**The Fitness Journey** is a website thant contains an exercise database, along with a routine tracker and forum section. There are many people in the world who like/want to workout, ranging from beginners to advanced; some know what they’re doing, but some don’t. Users will be able to create an account; it will have information about what type of fitness they perform, routines created, workouts logged, and other basic user information. Users will be able to share their fitness knowledge with other users via post/comment system, as well as track/share their workout routines.
+**The Fitness Journey** is a web application that allows users to create/log workout routines, learn how to perform a variety of exercises, and ask questions/search topics via forum system.
 
 ## Features
 
-This application will be utilizing React and NodeJS; focusing on an even full-stack design. It will also be developed with a responsive design in mind; dynamically changing from a website to a mobile screen size.
-The users of my application will consist of users who want to learn how to perform exercises as well as track their workout routines. I plan on creating my own RESTful API with exercise data populated from the internet. I do need to secure user account information such as passwords.
+The main goal of Fitness Journey is to allow an athlete to create workout routines using exercises contained on the website's exercise database. Once created, the athlete is able to log these workouts and share their routines/logs with other users, inspiring them to create their own routines and log workouts for themselves.
 
-The user will either log in or register for the application. Once logged in, the app will redirect the user to the homepage. In the nav bar, the user will be able to click the exercise tab. This tab will consist of exercises in our database; name, equipment type, description, instructions, and image instructions. There will also be another tab which will direct to a link where the user will be able to log their workout, picking the exercises from our database.
+There are many people in the world who like/want to workout; ranging from beginners to advanced. Some of these people know what they’re doing, but some do not. Users will be able to create an account; it will have information about what type of fitness they perform, routines created, workouts logged, and other basic user information.
+
+**Fitness Journey** contains a database with a variety of exercises. Each exercise contains information: exercise description, equipment utilized, muscles worked, instructions, and a picture showing how to perform the exercise. This allows users to really understand the exercise.
+
+Users will be able to share their fitness knowledge with others via post/comment system. This allows users to communicate with other members of the application, as well as grow their knowledge of fitness with one another by sharing information with one another.
+
+## Fitness Journey API
+
+Fitness Journey utilizes a custom API that where the frontend communicates with the backend of the application, which allows it to perform CRUD operations with the database.
 
 ## Technologies Utilized
 
 - HTML
 - JavaScript
   - ReactJS
+    - Material UI Component Library
   - NodeJS
     - ExpressJS
 - PostgreSQL
