@@ -18,7 +18,7 @@ Users will be able to share their fitness knowledge with others via post/comment
 
 ## Example User Flow
 
-![Image of userflow](userflow.png)
+![Image of userflow](user-flow.png)
 
 ## Fitness Journey API
 
