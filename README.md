@@ -16,9 +16,13 @@ There are many people in the world who like/want to workout; ranging from beginn
 
 Users will be able to share their fitness knowledge with others via post/comment system. This allows users to communicate with other members of the application, as well as grow their knowledge of fitness with one another by sharing information with one another.
 
+## Example User Flow
+
+![Image of userflow](userflow.png)
+
 ## Fitness Journey API
 
-Fitness Journey utilizes a custom API that where the frontend communicates with the backend of the application, which allows it to perform CRUD operations with the database.
+Fitness Journey utilizes a custom API where the frontend communicates with the backend of the application, allowing it to perform CRUD operations with the database.
 
 ## Technologies Utilized
 
