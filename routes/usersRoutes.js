@@ -8,9 +8,9 @@ const router = express.Router();
 
 const { BadRequestError } = require("../expressError");
 const {
-  ensureAdminOrCorrectUser,
-  ensureLoggedIn,
-  ensureAdmin,
+	ensureAdminOrCorrectUser,
+	ensureLoggedIn,
+	ensureAdmin,
 } = require("../middleware/auth");
 const { createToken } = require("../helpers/tokens");
 
@@ -28,22 +28,22 @@ const userUpdateSchema = require("../schemas/userUpdate.json");
  */
 
 router.post("/", ensureAdmin, async (req, res, next) => {
-  try {
-    const validator = jsonschema.validate(req.body, userNewSchema);
-    // if json is not valid, return errors
-    if (!validator.valid) {
-      const errs = validator.errors.map((er) => er.stack);
+	try {
+		const validator = jsonschema.validate(req.body, userNewSchema);
+		// if json is not valid, return errors
+		if (!validator.valid) {
+			const errs = validator.errors.map((er) => er.stack);
 
-      throw new BadRequestError(errs);
-    }
+			throw new BadRequestError(errs);
+		}
 
-    const user = await User.register(req.body);
-    const token = createToken(user);
+		const user = await User.register(req.body);
+		const token = createToken(user);
 
-    return res.status(201).json({ user, token });
-  } catch (err) {
-    return next(err);
-  }
+		return res.status(201).json({ user, token });
+	} catch (err) {
+		return next(err);
+	}
 });
 
 /** GET / => { users: [ {username, password, firstName, lastName, email, city, state, fitnessType, bio, imageUrl }, ... ] }
@@ -54,13 +54,13 @@ router.post("/", ensureAdmin, async (req, res, next) => {
  **/
 
 router.get("/", ensureLoggedIn, async (req, res, next) => {
-  try {
-    const users = await User.findAll();
+	try {
+		const users = await User.findAll();
 
-    return res.json({ users });
-  } catch (err) {
-    return next(err);
-  }
+		return res.json({ users });
+	} catch (err) {
+		return next(err);
+	}
 });
 
 /** GET /[username] => { user }
@@ -72,13 +72,13 @@ router.get("/", ensureLoggedIn, async (req, res, next) => {
  **/
 
 router.get("/:username", ensureLoggedIn, async (req, res, next) => {
-  try {
-    const user = await User.get(req.params.username);
+	try {
+		const user = await User.get(req.params.username);
 
-    return res.json({ user });
-  } catch (err) {
-    return next(err);
-  }
+		return res.json({ user });
+	} catch (err) {
+		return next(err);
+	}
 });
 
 /** PATCH /[username] { user } => { user }
@@ -92,22 +92,22 @@ router.get("/:username", ensureLoggedIn, async (req, res, next) => {
  **/
 
 router.patch("/:username", ensureAdminOrCorrectUser, async (req, res, next) => {
-  try {
-    const validator = jsonschema.validate(req.body, userUpdateSchema);
+	try {
+		const validator = jsonschema.validate(req.body, userUpdateSchema);
 
-    // if json is not valid, return errors
-    if (!validator.valid) {
-      const errs = validator.errors.map((er) => er.stack);
+		// if json is not valid, return errors
+		if (!validator.valid) {
+			const errs = validator.errors.map((er) => er.stack);
 
-      throw new BadRequestError(errs);
-    }
+			throw new BadRequestError(errs);
+		}
 
-    const user = await User.update(req.params.username, req.body);
+		const user = await User.update(req.params.username, req.body);
 
-    return res.json({ user });
-  } catch (err) {
-    return next(err);
-  }
+		return res.json({ user });
+	} catch (err) {
+		return next(err);
+	}
 });
 
 /** DELETE /[username]  =>  { deleted: username }
@@ -116,17 +116,17 @@ router.patch("/:username", ensureAdminOrCorrectUser, async (req, res, next) => {
  **/
 
 router.delete(
-  "/:username",
-  ensureAdminOrCorrectUser,
-  async function (req, res, next) {
-    try {
-      await User.remove(req.params.username);
+	"/:username",
+	ensureAdminOrCorrectUser,
+	async function (req, res, next) {
+		try {
+			await User.remove(req.params.username);
 
-      return res.json({ deleted: req.params.username });
-    } catch (err) {
-      return next(err);
-    }
-  }
+			return res.json({ deleted: req.params.username });
+		} catch (err) {
+			return next(err);
+		}
+	}
 );
 
 module.exports = router;
