@@ -155,6 +155,7 @@ class User {
 		return result.rows;
 	}
 
+	//? Add routines object ///////////////////////
 	/** Given a username, return data about user.
 	 *
 	 * Returns { username, firstName, lastName, email, city, state, fitnessType, bio, image_url, isAdmin, routines }
@@ -182,8 +183,8 @@ class User {
                 JSON_BUILD_OBJECT('id', logs.id, 'date', logs.date)
             ) END AS logs
             FROM users
-              INNER JOIN routines ON routines.username = users.username 
-              INNER JOIN logs ON users.username = logs.username 
+              LEFT JOIN routines ON routines.username = users.username 
+              LEFT JOIN logs ON users.username = logs.username 
             WHERE users.username = $1
             GROUP BY users.username
             ORDER BY users.username`,
