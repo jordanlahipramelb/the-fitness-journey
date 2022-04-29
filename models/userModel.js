@@ -155,7 +155,6 @@ class User {
 		return result.rows;
 	}
 
-	//? Add routines object ///////////////////////
 	/** Given a username, return data about user.
 	 *
 	 * Returns { username, firstName, lastName, email, city, state, fitnessType, bio, image_url, isAdmin, routines }
