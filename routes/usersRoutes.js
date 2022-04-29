@@ -71,7 +71,7 @@ router.get("/", ensureLoggedIn, async (req, res, next) => {
  * Authorization required: logged in
  **/
 
-router.get("/:username", ensureLoggedIn, async (req, res, next) => {
+router.get("/test", ensureLoggedIn, async (req, res, next) => {
 	try {
 		const user = await User.get(req.params.username);
 
