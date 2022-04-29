@@ -184,7 +184,7 @@ class User {
             ) END AS logs
             FROM users
               LEFT JOIN routines ON routines.username = users.username 
-              LEFT JOIN logs ON users.username = logs.username 
+              LEFT OUTER JOIN logs ON users.username = logs.username 
             WHERE users.username = $1
             GROUP BY users.username
             ORDER BY users.username`,
