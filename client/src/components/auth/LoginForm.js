@@ -13,97 +13,107 @@ import "./LoginForm.css";
  */
 
 const LoginForm = ({ login }) => {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-  });
-  const [formErrors, setFormErrors] = useState([]);
-  const history = useHistory();
+	const [formData, setFormData] = useState({
+		username: "",
+		password: "",
+	});
+	const [formErrors, setFormErrors] = useState([]);
+	const history = useHistory();
 
-  /** Handle form submission. */
+	/** Handle form submission. */
 
-  const handleSubmit = async (evt) => {
-    evt.preventDefault();
+	const handleSubmit = async (evt) => {
+		evt.preventDefault();
 
-    // login function prop passed in from api->App->Routes
-    let result = await login(formData);
+		// login function prop passed in from api->App->Routes
+		let result = await login(formData);
 
-    // redirect to companies if successful
-    if (result.success) {
-      history.push("/companies");
-    } else {
-      setFormErrors(result.errors);
-    }
-  };
+		if (result.success) {
+			history.push("/");
+		} else {
+			setFormErrors(result.errors);
+		}
+	};
 
-  /** Updates form field when typing */
+	/** Updates form field when typing */
 
-  const handleChange = (evt) => {
-    const { name, value } = evt.target;
-    setFormData((data) => ({
-      ...data,
-      [name]: value,
-    }));
-  };
+	const handleChange = (evt) => {
+		const { name, value } = evt.target;
+		setFormData((data) => ({
+			...data,
+			[name]: value,
+		}));
+	};
 
-  const { username, password } = formData;
+	const { username, password } = formData;
 
-  return (
-    <div className="LoginForm">
-      <div className="container h-100">
-        <div className="d-flex align-items-center justify-content-center h-100">
-          <div className="login-form mb-5">
-            <h3 className="mb-3">Login</h3>
+	return (
+		<div className="LoginForm">
+			<div className="container h-100">
+				<div className="d-flex align-items-center justify-content-center h-100">
+					<div className="login-form mb-5">
+						<h3 className="mb-3">Login</h3>
 
-            <Box
-              component="form"
-              sx={{
-                "& > :not(style)": { m: 1 },
-              }}
-              autoComplete="off"
-              onSubmit={handleSubmit}
-            >
-              <TextField
-                id="outlined-basic"
-                label="Username"
-                variant="outlined"
-                className="form-control mb-2"
-                name="username"
-                value={username}
-                onChange={handleChange}
-                autoComplete="username"
-                required
-              />
+						<Box
+							component="form"
+							sx={{
+								"& > :not(style)": { m: 1 },
+							}}
+							autoComplete="off"
+							onSubmit={handleSubmit}
+						>
+							<TextField
+								id="outlined-basic"
+								label="Username"
+								variant="outlined"
+								className="form-control mb-2"
+								name="username"
+								value={username}
+								onChange={handleChange}
+								autoComplete="username"
+								placeholder="testuser"
+								required
+							/>
 
-              <TextField
-                id="filled-password-input"
-                label="Password"
-                type="password"
-                name="password"
-                value={password}
-                onChange={handleChange}
-                autoComplete="current-password"
-                className="form-control"
-                required
-              />
+							<TextField
+								id="filled-password-input"
+								label="Password"
+								type="password"
+								name="password"
+								value={password}
+								onChange={handleChange}
+								autoComplete="current-password"
+								placeholder="password"
+								className="form-control"
+								required
+							/>
+							<div className="test-credentials">
+								<h6>Demo User Credentials</h6>
+								<p>
+									<b>Username:</b> testuser
+								</p>
+								<p>
+									<b>Password:</b> password
+								</p>
+							</div>
 
-              <div className="mt-4">
-                {formErrors.length ? (
-                  <Alert type="danger" messages={formErrors} />
-                ) : null}
-              </div>
-              <button
-                className="btn btn-primary container"
-                onSubmit={handleSubmit}
-              >
-                Login
-              </button>
-            </Box>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+							<div className="mt-4">
+								{formErrors.length ? (
+									<Alert type="danger" messages={formErrors} />
+								) : null}
+							</div>
+							<button
+								className="btn btn-primary container"
+								onSubmit={handleSubmit}
+							>
+								Login
+							</button>
+						</Box>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default LoginForm;
